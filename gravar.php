@@ -16,7 +16,7 @@ if($imagem != NULL) {
 
 		unlink($nomeFinal);
 
-		//header("location:exibir.php");
+		header("location:exibir2.php");
 	}
 }
 else {
