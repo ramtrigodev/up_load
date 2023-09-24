@@ -12,7 +12,7 @@ if($imagem != NULL) {
 		$mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
 
 
-	mysqli_query($conexao,"INSERT INTO PESSOA (PES_IMG) VALUES ('$mysqlImg')") ;
+	mysqli_query($conexao,"INSERT INTO arquivos (PES_IMG) VALUES ('$mysqlImg')") ;
 
 		unlink($nomeFinal);
 
