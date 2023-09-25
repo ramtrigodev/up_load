@@ -2,7 +2,7 @@
 $host = "localhost";
 $usuarioBanco = "root";
 $senhaBanco = "";
-$nomeBanco = "documentos";
+$nomeBanco = "ams200";
 
 $conexao = new mysqli($host, $usuarioBanco, $senhaBanco, $nomeBanco);
 
