@@ -17,6 +17,7 @@ include_once 'conexao.php';
     <h1>Upload PDF BLOB</h1>
 
     <?php
+    include "conexao.php";
     // Receber os dados do formulario
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -27,14 +28,7 @@ include_once 'conexao.php';
 
         // Validar se é um arquivo PDF
         if ($arquivo_pdf['type'] == "application/pdf") {
-            // Conectar ao banco de dados
-            $conexao = mysqli_connect("localhost", "root", "", "ams200");
-
-            // Verificar a conexão
-            if (mysqli_connect_errno()) {
-                die("Erro na conexão com o banco de dados: " . mysqli_connect_error());
-            }
-
+          
             // Preparar os dados para inserção
             $numero_contrato = mysqli_real_escape_string($conexao, $dados['numero_contrato']);
             $nome_documento = mysqli_real_escape_string($conexao, $arquivo_pdf['name']);
